@@ -1,0 +1,315 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #6200ea;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+/* HEADER & MENU */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 8%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    background: #6200ea;
+}
+
+/* Nome Felipe Giannetti com Borda */
+header .logo {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #ffffff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+header .logo:hover {
+    background: #fff;
+    color: #6200ea;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header ul li {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    display: block;
+}
+
+header ul li:hover {
+    background-color: #fff;
+}
+
+header ul li:hover a {
+    color: #6200ea;
+}
+
+/* SLIDER (EFEITO STICKY / IBM SHIFT) */
+.slider,
+.extra-content {
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.item { 
+    display: none; 
+}
+
+.item.active { 
+    display: block; 
+}
+
+/* IMAGEM E TEXTO DO SLIDER */
+.image-box {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%, -50%);
+    z-index: 2;
+}
+
+.image-box img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.4);
+}
+
+.bg-title {
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20vw;
+    color: #fff;
+    opacity: 0.15;
+    z-index: 1;
+    left: 45%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.info-box {
+    position: absolute;
+    right: 12%;
+    bottom: 5%;
+    max-width: 350px;
+    z-index: 3;
+}
+
+.top-label {
+    color: #aeea00;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.see-more {
+    background: #aeea00;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* NAVEGAÇÃO DO SLIDER */
+.arrows {
+    position: absolute;
+    bottom: 74px;   
+    left: 250px;    
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.arrow-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 50px;
+    left: 8%;
+    z-index: 5;
+}
+
+.indicators .number {
+    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    line-height: 1;
+}
+
+.line-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    background: rgba(255,255,255,0.2);
+}
+
+.line.active {
+    background: #aeea00;
+}
+
+
+.extra-content {
+    position: relative;
+    z-index: 10;
+    background: #6200ea;
+    padding: 150px 8% 120px;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    color: #b7ff00;
+    margin-bottom: 30px;
+}
+
+.main-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.info-item {
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+}
+
+.info-item h3 {
+    color: #b7ff00;
+    margin-bottom: 15px;
+}
+
+.info-item ul {
+    padding-left: 20px;
+}
+
+.info-item li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* ANIMAÇÕES */
+@keyframes efeitoEntrada {
+    from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+.item.active .image-box img { animation: efeitoEntrada 0.8s ease-out forwards; }
+.item.active .info-box { animation: efeitoEntrada 0.8s ease-out 0.2s forwards; opacity: 0; }
+.item.active .bg-title { animation: efeitoEntrada 1.2s ease-out forwards; }
+
+.extra-content {
+    min-height: 100vh;
+    background: #6200ea;
+    padding: 120px 8%;
+    position: relative;
+    z-index: 10;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    color: #b7ff00;
+    margin-bottom: 30px;
+}
+
+.main-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.info-item {
+    border: 2px solid rgba(255,255,255,0.25);
+    border-radius: 25px;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+}
+
+.info-item h3 {
+    color: #b7ff00;
+    margin-bottom: 15px;
+}
+
+.info-item ul {
+    padding-left: 20px;
+}
+
+.info-item li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+

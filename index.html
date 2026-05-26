@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Felipe Giannetti Portfolio</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+FELIPE GIANNETTI
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main class="slider">
+
+<div class="list">
+
+<div class="item active">
+
+<h1 class="bg-title">FELIPE</h1>
+
+<div class="image-box">
+
+<img src="./img/NEVE 1.jpg">
+
+</div>
+
+<div class="info-box">
+
+<p class="top-label">
+
+This is my website!
+
+</p>
+
+<p class="description">
+
+Welcome to my website. I am excited for you to learn more about me.
+
+</p>
+
+<button class="see-more">
+
+SEE MORE
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="item">
+
+<h1 class="bg-title">
+
+UTSA
+
+</h1>
+
+<div class="image-box">
+
+<img src="./img/FOOTBALL.png">
+
+</div>
+
+<div class="info-box">
+
+<p class="top-label">
+
+Education
+
+</p>
+
+<p class="description">
+
+Student at UTSA, an institution with all three National Center of Academic Excellence designations in Cyber Security.
+
+</p>
+
+<button class="see-more">
+
+SEE MORE
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="arrows">
+
+<button class="arrow-btn" id="prev">
+
+&lt;
+
+</button>
+
+<button class="arrow-btn" id="next">
+
+&gt;
+
+</button>
+
+</div>
+
+
+<div class="indicators">
+
+<div class="number">
+
+01
+
+</div>
+
+<div class="line-container">
+
+<div class="line active"></div>
+<div class="line"></div>
+
+</div>
+
+</div>
+
+</main>
+<section class="extra-content">
+    <div class="content-wrapper">
+        <h2 class="section-title">More About Me</h2>
+
+        <p class="main-text">
+            I am a Cybersecurity student at UTSA focused on SOC operations, network security,
+            and defensive security engineering. My interests include threat detection, security
+            monitoring, ethical hacking, network analysis, and incident response.
+        </p>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Education</h3>
+                <ul>
+                    <li>Cybersecurity — University of Texas at San Antonio</li>
+                    <li>North Country Union High School — Vermont</li>
+                    <li>Liceu Jardim — Brazil</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Google Cybersecurity Certificate</li>
+                    <li>IBM Cloud Certificate</li>
+                    <li>CompTIA Security+ — In Progress</li>
+                    <li>Splunk Core — In Progress</li>
+                </ul>
+            </div>
+
+            <div class="info-item">
+                <h3>Interests</h3>
+                <ul>
+                    <li>SOC Analysis</li>
+                    <li>Network Security</li>
+                    <li>Threat Detection</li>
+                    <li>Incident Response</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+
+const items = document.querySelectorAll('.item')
+
+const number = document.querySelector('.number')
+
+const lines = document.querySelectorAll('.line')
+
+let active = 0
+
+function updateSlider(){
+
+items.forEach(item=>{
+
+item.classList.remove('active')
+
+})
+
+lines.forEach(line=>{
+
+line.classList.remove('active')
+
+})
+
+items[active].classList.add('active')
+
+lines[active].classList.add('active')
+
+number.textContent=
+
+String(active+1).padStart(2,'0')
+
+}
+
+document.getElementById('next')
+
+.onclick=()=>{
+
+active++
+
+if(active>=items.length){
+
+active=0
+
+}
+
+updateSlider()
+
+}
+
+document.getElementById('prev')
+
+.onclick=()=>{
+
+active--
+
+if(active<0){
+
+active=items.length-1
+
+}
+
+updateSlider()
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Garante que o fundo roxo cubra tudo e o texto seja branco */
+.body-projects {
+    background-color: #6200ea !important; /* Cor roxa base */
+    overflow-y: auto !important;
+    height: auto !important;
+    color: white;
+}
+
+/* Espaçamento extra no topo para não ficar por baixo do menu */
+.projects-container {
+    padding: 180px 10% 100px !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Alinhamento dos cards na horizontal */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    align-items: start; /* Mantém o alinhamento superior dos cards uniforme */
+}
+
+/* Estilo Base dos Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 2px solid #ffffff;
+    padding: 35px;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    
+    /* Configuração Flexbox para conter textos longos dinamicamente */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 520px;
+    height: 100%;
+}
+
+.project-card h3 {
+    font-family: 'Poppins', sans-serif;
+    margin: 15px 0 10px 0;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+/* Força a cor branca e opacidade total no parágrafo introdutório */
+.project-intro {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff !important;   
+    opacity: 1.0 !important;    
+    line-height: 1.6;
+    text-align: left;  
+    margin-bottom: 1.2rem;
+}
+
+/* Cores dos links */
+.github-link {
+    color: #aeea00 !important;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap !important;
+}
+
+/* Efeito Hover com Brilho Neon */
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #aeea00; /* Muda a borda para verde neon */
+    box-shadow: 0 0 20px rgba(174, 234, 0, 0.4), 
+                inset 0 0 10px rgba(174, 234, 0, 0.2); 
+}
+
+/* Alinhamento do Cabeçalho Interno (Tech Stack + Link) */
+.project-header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important; /* Impede quebra de linha feia */
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+
+.tech-stack {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    opacity: 0.9;
+    white-space: nowrap !important; /* Mantém as tags em uma linha única */
+}
+
+/* Subtítulo de Destaques */
+.skills-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #aeea00 !important; /* Verde Limão para excelente contraste */
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Lista de Bullet Points alinhada à esquerda */
+.skills-list {
+    font-family: 'Poppins', sans-serif;
+    list-style-type: disc; 
+    padding-left: 1.2rem;   
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.skills-list li {
+    margin-bottom: 0.6rem;   
+    opacity: 0.9;
+    line-height: 1.5;
+    color: #ffffff;        
+}
