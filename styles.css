@@ -1,4 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@ body {
     overflow-y: auto;
     height: auto;
 }
-/* HEADER & MENU */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,8 +28,6 @@ header {
 
     background: #6200ea;
 }
-
-/* Nome Felipe Giannetti com Borda */
 header .logo {
     color: #ffffff;
     font-family: 'Oswald', sans-serif;
@@ -75,7 +71,6 @@ header ul li:hover a {
     color: #6200ea;
 }
 
-/* SLIDER (EFEITO STICKY / IBM SHIFT) */
 .slider,
 .extra-content {
     height: 100vh;
@@ -89,8 +84,6 @@ header ul li:hover a {
 .item.active { 
     display: block; 
 }
-
-/* IMAGEM E TEXTO DO SLIDER */
 .image-box {
     position: absolute;
     top: 50%;
@@ -142,7 +135,6 @@ header ul li:hover a {
     margin-top: 20px;
 }
 
-/* NAVEGAÇÃO DO SLIDER */
 .arrows {
     position: absolute;
     bottom: 74px;   
@@ -245,7 +237,6 @@ header ul li:hover a {
     line-height: 1.5;
 }
 
-/* ANIMAÇÕES */
 @keyframes efeitoEntrada {
     from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
     to { opacity: 1; transform: translateY(0); filter: blur(0); }

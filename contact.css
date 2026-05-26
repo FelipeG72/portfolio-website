@@ -1,4 +1,3 @@
-/* --- Global & Reset Basics --- */
 * {
     margin: 0;
     padding: 0;
@@ -9,26 +8,31 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #6200ea;
     color: white;
+    overflow-x: hidden;
 }
 
-/* --- Header Layout Fix --- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    position: absolute; /* Keeps it over the background gradient cleanly */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
+    background-color: #6200ea;
 }
 
 .logo {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 700;
     color: white;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -44,7 +48,7 @@ nav ul li a {
     padding: 8px 20px;
     border: 2px solid white;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -52,13 +56,9 @@ nav ul li a:hover {
     color: #6200ea;
 }
 
-/* --- Contact Page Layout --- */
 .contact-page {
     min-height: 100vh;
-    padding-top: 180px; /* Gives space so header doesn't overlap content */
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 80px;
+    padding: 180px 10% 80px;
     background: linear-gradient(180deg, #6a00ff, #5d00ea);
 }
 
