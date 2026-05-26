@@ -125,14 +125,29 @@ header ul li:hover a {
     margin-bottom: 10px;
 }
 
-.see-more {
-    background: #aeea00;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 20px;
+.see-more{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    width:170px;
+    height:55px;
+
+    background:#c6ff00;
+    color:#000;
+
+    border-radius:30px;
+
+    text-decoration:none; /* removes underline */
+    font-weight:700;
+
+    margin-top:25px; /* fixes spacing */
+
+    transition:0.3s ease;
+}
+
+.see-more:hover{
+    transform:scale(1.05);
 }
 
 .arrows {
