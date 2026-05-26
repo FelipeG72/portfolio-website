@@ -35,6 +35,4 @@ Cybersecurity portfolio showcasing projects, certifications, and technical exper
 
 Python • HTML • CSS • JavaScript • Kali Linux
 
-## Contact
 
-GitHub: github.com/FelipeG72
